@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   const pathname = usePathname(); // Get the current route
   const [isDetailsVisible, setIsDetailsVisible] = useState(false); // State for Details box visibility
+  const [isReportVisible, setIsReportVisible] = useState(false); // State for Details box visibility
 
   return (
     <html lang="en">
@@ -44,47 +45,61 @@ export default function RootLayout({ children }) {
           </div>
           <nav className="flex flex-col items-center gap-4 justify-center h-full mt-8">
             <div className="w-full text-center relative">
-              <button
-                onClick={() => setIsDetailsVisible(!isDetailsVisible)}
-                className={`w-full text-center py-2 px-4 transition-colors ${pathname.startsWith("/design")
-                  ? "bg-purple-600 text-white"
-                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                  }`}
-              >
-                Design
-              </button>
-              <div
-                className={`w-full flex overflow-hidden transform transition-all duration-300 ${isDetailsVisible || pathname === "/design/details"
-                    ? "max-h-40 translate-y-0"
-                    : "max-h-0 -translate-y-full"
-                  }`}
-              >
-                <Link
-                  href="/design/details"
-                  className={`w-full text-center py-2 px-4 text-gray-300 hover:bg-gray-600 hover:text-white bg-gray-700 mt-1 ${pathname === "/design/details" ? "bg-purple-600 text-white" : ""}`}
+              <Link href="/design">
+                <button
+                  onClick={() => setIsDetailsVisible(!isDetailsVisible)}
+                  className={`w-full text-center py-2 px-4 transition-colors ${pathname === "/design"
+                    ? "bg-purple-600 text-white"
+                    : "bg-gray-800 text-gray-300 hover:bg-purple-500"
+                    }`}
                 >
-                  Details
-                </Link>
-              </div>
+                  Design
+                </button>
+              </Link>
             </div>
             {[
               { href: "/financials", label: "Financials" },
               { href: "/gallery", label: "Gallery" },
               { href: "/health", label: "Health" },
               { href: "/resources", label: "Resources" },
-              { href: "/risk-register", label: "Risk Register" },
             ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`w-full text-center py-2 px-4 transition-colors ${pathname === link.href
                   ? "bg-purple-600 text-white"
-                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-600"
                   }`}
               >
                 {link.label}
               </Link>
             ))}
+            <div className="w-full text-center relative">
+              <Link href="/risk-register">
+                <button
+                  onClick={() => setIsReportVisible(!isReportVisible)}
+                  className={`w-full text-center py-2 px-4 transition-colors ${pathname === "/risk-register"
+                    ? "bg-purple-600 text-white"
+                    : "bg-gray-800 text-gray-300 hover:bg-purple-500"
+                    }`}
+                >
+                  Risk Register
+                </button>
+              </Link>
+              <div
+                className={`w-full flex flex-col bg-gray-700 overflow-hidden transform transition-all duration-300 ${isReportVisible || pathname === "/risk-register/report"
+                  ? "max-h-40 translate-y-0"
+                  : "max-h-0 -translate-y-full"
+                  }`}
+              >
+                <Link
+                  href="/risk-register/report"
+                  className={`w-full text-center py-2 px-4 text-gray-300 hover:bg-gray-600 hover:text-white ${pathname === "/risk-register/report" ? "bg-purple-600 text-white" : ""}`}
+                >
+                  Report
+                </Link>
+              </div>
+            </div>
           </nav>
         </header>
 
@@ -93,7 +108,7 @@ export default function RootLayout({ children }) {
           <main className="flex-1">{children}</main>
 
           {/* Footer */}
-          <footer className="bg-gray-800 text-white py-4">
+          <footer className="bg-gray-700 text-white py-4">
             <div className="container mx-auto text-center">
               Shakthi Gopamshana   35048573
             </div>
