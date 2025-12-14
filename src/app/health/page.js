@@ -7,10 +7,10 @@ export default function Health() {
       <main className="flex-1 items-center justify-center bg-black  p-4">
         <div className="relative">
           <Image
-            src="/images/Sheffield_Hallam_University_logo.svg.png"
-            alt="Logo"
-            width={128}
-            height={128}
+            src="/images/health-main.png"
+            alt="health-main"
+            width={1420}
+            height={568}
             className="w-full h-100 object-fill rounded-md"
           />
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-white px-2 py-1 rounded">HEALTH AND SAFETY ISSUES</h1>
@@ -19,8 +19,14 @@ export default function Health() {
           <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-4 pb-2">Health and Safety Issues</h2>
           The management of safety and health is the centre of success in implementation of this project, especially with presence of children and youthful population. The whole undertakings will be accomplished based on the Construction (Design and Management) Regulations 2015 (CDM 2015).
         </p>
-        <div className="w-full h-100 bg-gray-300 flex items-center justify-center">
-          <span className="text-gray-500">Photo Placeholder 2</span>
+        <div className="flex justify-center p-4">
+          <Image
+            src="/images/health-center.png"
+            alt="health-center"
+            width={766}
+            height={525}
+            className="h-100 object-fill rounded-md"
+          />
         </div>
         <div className="w-full bg-amber-700 p-4 rounded-md">
           <h3 className="text-xl font-semibold mt-4">Risk Identification and Control.</h3>
@@ -44,8 +50,14 @@ export default function Health() {
           ></iframe>
         </div>
         <div className="mt-4 flex flex-rows gap-4">
-          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
+          <div className="flex justify-center p-4">
+            <Image
+              src="/images/health-left.png"
+              alt="health-left"
+              width={308}
+              height={164}
+              className="w-full h-45 object-fill rounded-md"
+            />
           </div>
           <div className="w-full bg-amber-700 p-4 rounded-md">
             <h3 className="text-xl font-semibold mt-4">Safeguarding Measures</h3>

@@ -4,13 +4,13 @@ import Image from "next/image"; // Import Next.js Image component
 export default function Design() {
   return (
     <div className="flex flex-rows min-h-screen items-center justify-center font-sans dark:bg-black">
-      <main className="flex-1 items-center justify-center bg-black  p-4">
+      <main className="flex-1 gap-2 items-center justify-center bg-black  p-4">
         <div className="relative">
           <Image
-            src="/images/Sheffield_Hallam_University_logo.svg.png"
-            alt="Logo"
-            width={128}
-            height={128}
+            src="/images/design-main.png"
+            alt="Design Main"
+            width={1200}
+            height={672}
             className="w-full h-100 object-fill rounded-md"
           />
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-white px-2 py-1 rounded">Design and Planning Factors.</h1>
@@ -31,13 +31,14 @@ export default function Design() {
             The new building is also linked securely to the old school by an internal connection through which staff and students can transfer between the two facilities without the risk of being exposed to the unfavourable weather or any other external threats. External circulation routes are in accordance with Part M of building regulations making sure that all users can access them.
           </p>
         </div>
-        <div className="mt-4 flex gap-4">
-          <div className="w-1/2 h-64 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 1</span>
-          </div>
-          <div className="w-1/2 h-64 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
-          </div>
+        <div className="flex justify-center p-4">
+          <Image
+            src="/images/design-center.png"
+            alt="Design-center"
+            width={772}
+            height={514}
+            className="w-1/2 h-100 object-fill rounded-md"
+          />
         </div>
         <div className="mt-4 flex flex-rows gap-4">
           <div className="w-full bg-amber-700 p-4 rounded-md">
@@ -58,8 +59,14 @@ export default function Design() {
               The design will also include fire safety, and in consultation with Building Control and the Fire Authority, the design will be based on compliance as opposed to superficial implementation.
             </p>
           </div>
-          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
+          <div className="flex items-center justify-center">
+            <Image
+              src="/images/design-right.png"
+              alt="Design-right"
+              width={310}
+              height={163}
+              className="w-full h-100 object-contain rounded-md"
+            />
           </div>
         </div>
         <div className="mt-4 p-4 rounded-md">
@@ -70,8 +77,14 @@ export default function Design() {
           </p>
         </div>
         <div className="mt-4 flex flex-rows gap-4">
-          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
+          <div className="flex items-center justify-center">
+            <Image
+              src="/images/design-left.png"
+              alt="Design-left"
+              width={268}
+              height={188}
+              className="w-full h-100 object-contain rounded-md"
+            />
           </div>
           <div className="w-full bg-amber-700 p-4 rounded-md">
             <h3 className="text-xl font-semibold mt-4">Sustainability Strategy</h3>
@@ -85,6 +98,3 @@ export default function Design() {
     </div>
   );
 }
-
-
-
