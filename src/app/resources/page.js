@@ -19,8 +19,14 @@ export default function Resources() {
           <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-4 pb-2">Resource Management</h2>
           Resource management is part and parcel of Construction Production Management and it involves the proper coordination of plant, labour and materials to complete the programme targets. This would be of great significance to the Library Learning Centre project because the site is limited, safeguards must be considered and disturbance to school operations should be minimised.
         </p>
-        <div className="w-1/2 h-64 bg-gray-300 flex items-center justify-center">
-          <span className="text-gray-500">Photo Placeholder 1</span>
+        <div className="flex justify-center p-4">
+          <Image
+            src="/images/resource-center.png"
+            alt="resource-center"
+            width={771}
+            height={456}
+            className="w-2/3 h-120 object-fill rounded-md"
+          />
         </div>
         <div className="mt-4 flex flex-rows gap-4">
           <div className="w-full bg-amber-700 p-4 rounded-md">
@@ -29,13 +35,25 @@ export default function Resources() {
               Some of the plant that will be involved in the construction activities includes mobile cranes, telehandlers, MEWPs, compact excavators and dumpers. The criteria to be used in selection will focus on appropriateness to a limited school location, safety performance and productivity. As an example, tele handlers minimize the risks of manual handling, and enhance the efficiency of material distribution. The use of plants will be tracked with the help of daily logs and, when necessary, with GPS-based control to determine the idle time, optimise the hire time and eliminate wasteful spending to uphold lean and sustainable operations.
             </p>
           </div>
-          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
+          <div className="flex justify-center p-4">
+            <Image
+              src="/images/resource-right1.png"
+              alt="resource-right1"
+              width={264}
+              height={191}
+              className="w-full h-60 object-fill rounded-md"
+            />
           </div>
         </div>
         <div className="mt-4 flex flex-rows gap-4">
-          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
+          <div className="flex justify-center p-4">
+            <Image
+              src="/images/resource-left.png"
+              alt="resource-left"
+              width={266}
+              height={190}
+              className="w-full h-60 object-fill rounded-md"
+            />
           </div>
           <div className="w-full bg-amber-700 p-4 rounded-md">
             <h3 className="text-xl font-semibold mt-4">Workforce Planning and Control.</h3>
@@ -51,8 +69,14 @@ export default function Resources() {
               The materials management will take the form of just-in-time delivery to ease the storage strains, enhance the safety and minimise waste. The materials will be all DfE technical and sustainability standards. It will have a digital dashboard to monitor the deliveries, waste, labour hours, plant utilisation and productivity, to assist in making decisions based on data and enhance performance on the projects.
             </p>
           </div>
-          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
-            <span className="text-gray-500">Photo Placeholder 2</span>
+          <div className="flex justify-center p-4">
+            <Image
+              src="/images/resource-right2.png"
+              alt="resource-right2"
+              width={266}
+              height={190}
+              className="w-full h-54 object-fill rounded-md"
+            />
           </div>
         </div>
         <div className="flex w-full gap-5 justify-center">

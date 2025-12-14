@@ -15,8 +15,14 @@ export default function PersonalInfo() {
                     />
                     <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-white px-2 py-1 rounded">PERSONAL INFO</h1>
                 </div>
-                <div className="w-full h-100 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">Photo Placeholder 2</span>
+                <div className="flex justify-center p-4">
+                    <Image
+                        src="/images/info-center.png"
+                        alt="info-center"
+                        width={700}
+                        height={394}
+                        className="w-full h-150 object-fill rounded-md"
+                    />
                 </div>
                 <div className="w-full bg-amber-700 p-4 rounded-md">
                     <p className="mt-2 text-lg text-justify flex flex-rows gap-4 text-gray-800 dark:text-gray-200">
