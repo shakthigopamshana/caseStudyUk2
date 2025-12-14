@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image"; // Import Next.js Image component
 
-export default function Health() {
+export default function PersonalInfo() {
     return (
         <div className="flex flex-rows min-h-screen items-center justify-center font-sans dark:bg-black">
             <main className="flex-1 items-center justify-center bg-black  p-4">

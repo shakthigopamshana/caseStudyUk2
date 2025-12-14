@@ -31,7 +31,32 @@ export default function Health() {
             Proactive safety culture and site-specific risks awareness will be maintained through daily briefings and regular toolbox talks to make sure that workers are aware of the particular risks and the changing conditions that may occur on the site.
           </p>
         </div>
+        <div className="mt-8">
+          <iframe
+            width="560"
+            height="315"
+            src="https://youtu.be/mOnVh_NOLwU?si=E38IDGjjdZUnWs-M"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full max-w-2xl mx-auto rounded-md"
+          ></iframe>
+        </div>
+        <div className="mt-4 flex flex-rows gap-4">
+          <div className="w-1/2 bg-gray-300 flex items-center justify-center">
+            <span className="text-gray-500">Photo Placeholder 2</span>
+          </div>
+          <div className="w-full bg-amber-700 p-4 rounded-md">
+            <h3 className="text-xl font-semibold mt-4">Safeguarding Measures</h3>
+            <p className="mt-2 text-lg text-justify text-gray-800 dark:text-gray-200">
+              Any staff that could be in contact with pupils will be checked by Disclosure and Barring Service(DBS).Inductions on the site will focus on behavioural expectations, restricted areas and emergency procedure.The hoarding and controlled access will ensure that the construction is not entered by unauthorised personnel.
+            </p>
+          </div>
+        </div>
       </main>
     </div>
   );
 }
+
+

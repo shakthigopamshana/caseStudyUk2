@@ -42,8 +42,9 @@ export default function RootLayout({ children }) {
                 className="w-16 h-16 mx-auto"
               />
             </Link>
+            <h2 className="text-center pt-4">CONTRUCTION PROJECT MANAGEMENT</h2>
           </div>
-          <nav className="flex flex-col items-center gap-4 justify-center h-full mt-8">
+          <nav className="flex flex-col items-center gap-4 justify-center h-full">
             {/* <div className="w-full text-center relative">
               <Link href="/design">
                 <button
@@ -60,11 +61,8 @@ export default function RootLayout({ children }) {
             {[
               { href: "/design", label: "DESIGN" },
               { href: "/financials", label: "FINANCIALS" },
-              { href: "/gallery", label: "GALLERY" },
               { href: "/health", label: "HEALTH" },
               { href: "/resources", label: "RESOURCES" },
-              { href: "/conclusion", label: "CONCLUSION" },
-              { href: "/personalInfo", label: "PERSONAL INFO" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -103,6 +101,22 @@ export default function RootLayout({ children }) {
                 </Link>
               </div>
             </div>
+            {[
+              { href: "/conclusion", label: "CONCLUSION" },
+              { href: "/gallery", label: "GALLERY" },
+              { href: "/personalInfo", label: "PERSONAL INFO" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`w-full text-center py-2 px-4 transition-colors ${pathname === link.href
+                  ? "bg-purple-600 text-white"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-600"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
         </header>
 
