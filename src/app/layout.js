@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname to get the current route
 import Image from "next/image"; // Import Next.js Image component
 import { metadata } from "./metadata"; // Import metadata from the new file
+import { useState } from "react"; // Import useState for managing state
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   const pathname = usePathname(); // Get the current route
+  const [isDetailsVisible, setIsDetailsVisible] = useState(false); // State for Details box visibility
 
   return (
     <html lang="en">
@@ -34,15 +36,38 @@ export default function RootLayout({ children }) {
               <Image
                 src="/images/Sheffield_Hallam_University_logo.svg.png"
                 alt="Logo"
-                width={64} // Specify width
-                height={64} // Specify height
+                width={64}
+                height={64}
                 className="w-16 h-16 mx-auto"
               />
             </Link>
           </div>
-          <nav className="flex flex-col items-center gap-4 justify-center h-full">
+          <nav className="flex flex-col items-center gap-4 justify-center h-full mt-8">
+            <div className="w-full text-center relative">
+              <button
+                onClick={() => setIsDetailsVisible(!isDetailsVisible)}
+                className={`w-full text-center py-2 px-4 transition-colors ${pathname.startsWith("/design")
+                  ? "bg-purple-600 text-white"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                  }`}
+              >
+                Design
+              </button>
+              <div
+                className={`w-full flex overflow-hidden transform transition-all duration-300 ${isDetailsVisible || pathname === "/design/details"
+                    ? "max-h-40 translate-y-0"
+                    : "max-h-0 -translate-y-full"
+                  }`}
+              >
+                <Link
+                  href="/design/details"
+                  className={`w-full text-center py-2 px-4 text-gray-300 hover:bg-gray-600 hover:text-white bg-gray-700 mt-1 ${pathname === "/design/details" ? "bg-purple-600 text-white" : ""}`}
+                >
+                  Details
+                </Link>
+              </div>
+            </div>
             {[
-              { href: "/design", label: "Design" },
               { href: "/financials", label: "Financials" },
               { href: "/gallery", label: "Gallery" },
               { href: "/health", label: "Health" },
@@ -52,7 +77,7 @@ export default function RootLayout({ children }) {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`w-full text-center py-2 px-4 rounded-md transition-colors ${pathname === link.href
+                className={`w-full text-center py-2 px-4 transition-colors ${pathname === link.href
                   ? "bg-purple-600 text-white"
                   : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                   }`}
@@ -70,7 +95,7 @@ export default function RootLayout({ children }) {
           {/* Footer */}
           <footer className="bg-gray-800 text-white py-4">
             <div className="container mx-auto text-center">
-              &copy; 2025 Your Company. All rights reserved.
+              Shakthi Gopamshana   35048573
             </div>
           </footer>
         </div>
