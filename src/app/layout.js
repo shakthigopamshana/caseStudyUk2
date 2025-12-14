@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}>
         {/* Sidebar Header */}
-        <header className="bg-gray-800 text-white w-64 h-screen flex flex-col py-4 sticky top-0">
+        <header className="bg-gray-800 text-white w-54 h-screen flex flex-col py-4 sticky top-0">
           <div className="mb-8">
             <Link href="/">
               <Image
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
           <nav className="flex flex-col items-center gap-4 justify-center h-full mt-8">
-            <div className="w-full text-center relative">
+            {/* <div className="w-full text-center relative">
               <Link href="/design">
                 <button
                   onClick={() => setIsDetailsVisible(!isDetailsVisible)}
@@ -53,15 +53,18 @@ export default function RootLayout({ children }) {
                     : "bg-gray-800 text-gray-300 hover:bg-purple-500"
                     }`}
                 >
-                  Design
+                  DESIGN
                 </button>
               </Link>
-            </div>
+            </div> */}
             {[
-              { href: "/financials", label: "Financials" },
-              { href: "/gallery", label: "Gallery" },
-              { href: "/health", label: "Health" },
-              { href: "/resources", label: "Resources" },
+              { href: "/design", label: "DESIGN" },
+              { href: "/financials", label: "FINANCIALS" },
+              { href: "/gallery", label: "GALLERY" },
+              { href: "/health", label: "HEALTH" },
+              { href: "/resources", label: "RESOURCES" },
+              { href: "/conclusion", label: "CONCLUSION" },
+              { href: "/personalInfo", label: "PERSONAL INFO" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -83,7 +86,7 @@ export default function RootLayout({ children }) {
                     : "bg-gray-800 text-gray-300 hover:bg-purple-500"
                     }`}
                 >
-                  Risk Register
+                  RISK REGISTER
                 </button>
               </Link>
               <div
@@ -96,7 +99,7 @@ export default function RootLayout({ children }) {
                   href="/risk-register/report"
                   className={`w-full text-center py-2 px-4 text-gray-300 hover:bg-gray-600 hover:text-white ${pathname === "/risk-register/report" ? "bg-purple-600 text-white" : ""}`}
                 >
-                  Report
+                  REPORT
                 </Link>
               </div>
             </div>
